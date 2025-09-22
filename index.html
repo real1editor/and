@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Real1Editor — Elite Video Editing Services</title>
+  <meta name="description" content="Professional video editing services for YouTube, TikTok, and social media. Creative storytelling with precision editing.">
+  <meta property="og:title" content="Real1Editor — Elite Video Editing Services">
+  <meta property="og:description" content="Professional video editing services for YouTube, TikTok, and social media.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- VanillaTilt for card tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" defer></script>
+  <!-- Three.js for hero 3D scene -->
+  <script src="https://unpkg.com/three@0.163.0/build/three.min.js" defer></script>
+  <script src="https://unpkg.com/three@0.163.0/examples/js/controls/OrbitControls.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container container">
+        <a href="#home" class="nav-logo">
+          <i class="fas fa-film" aria-hidden="true"></i>
+          <span class="visually-hidden">Real1Editor</span>
+          <span aria-hidden="true">Real1Editor</span>
+        </a>
+        <div class="nav-actions">
+          <div class="nav-menu" id="navMenu" role="menubar" aria-label="Menu">
+            <a href="#home" class="nav-link" role="menuitem">Home</a>
+            <a href="#about" class="nav-link" role="menuitem">About Me</a>
+            <a href="#why-choose" class="nav-link" role="menuitem">Why Choose Me</a>
+            <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+            <a href="#services" class="nav-link" role="menuitem">Services</a>
+            <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero" aria-label="Hero section">
+      <div id="heroCanvasContainer" class="hero-canvas" aria-hidden="true">
+        <!-- Three.js canvas will be injected here -->
+        <canvas id="hero3d"></canvas>
+        <!-- layered blurred shapes as fallback/decor -->
+        <div class="hero-layer hero-layer--bg" aria-hidden="true"></div>
+        <div class="hero-layer hero-layer--mid" aria-hidden="true"></div>
+        <div class="hero-layer hero-layer--fg" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-left">
+          <h1>Transforming Visions Into <span class="accent-text">Cinematic Reality</span></h1>
+          <p class="slogan">Elite Video Editing — Creativity meets precision</p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn primary">View Portfolio</a>
+            <a href="#contact" class="btn secondary">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card" data-tilt data-tilt-scale="1.03" role="img" aria-label="Featured project preview">
+            <div class="card-badge">Featured</div>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Project preview" loading="lazy">
+            <div class="card-info">
+              <h3>Product Launch — Tech</h3>
+              <p>High-energy edit for a product launch campaign.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#portfolio" class="scroll-indicator" aria-hidden="true"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- Rest of the sections remain as in the previous version -->
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Professional Video Editor" loading="lazy">
+          </div>
+          <div class="about-text">
+            <h3>Crafting compelling visual narratives</h3>
+            <p>I'm a passionate video editor with over 8 years of experience creating impactful content for brands, filmmakers, and creators. I transform raw footage into stories that move audiences.</p>
+            <div class="skills">
+              <span class="skill">Adobe Premiere Pro</span>
+              <span class="skill">After Effects</span>
+              <span class="skill">DaVinci Resolve</span>
+              <span class="skill">Color Grading</span>
+              <span class="skill">Motion Graphics</span>
+              <span class="skill">Sound Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose, portfolio, services, testimonials, contact, feedback, newsletter, footer -->
+    <!-- (Use the same HTML structure as the previous delivered file — unchanged for content and accessibility) -->
+
+    <!-- Why Choose -->
+    <section id="why-choose" class="why-choose">
+      <div class="container">
+        <h2 class="section-title">Why Choose Me</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-tilt>
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Fast Delivery</h3>
+            <p>Quick turnaround without compromising on quality.</p>
+          </div>
+          <div class="feature-card" data-tilt>
+            <div class="feature-icon"><i class="fas fa-medal"></i></div>
+            <h3>Professional Quality</h3>
+            <p>Broadcast-level quality with attention to detail.</p>
+          </div>
+          <div class="feature-card" data-tilt>
+            <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Creative Cuts</h3>
+            <p>Innovative editing techniques tailored to your story.</p>
+          </div>
+          <div class="feature-card" data-tilt>
+            <div class="feature-icon"><i class="fas fa-headset"></i></div>
+            <h3>Dedicated Support</h3>
+            <p>Open communication and unlimited revisions until you're satisfied.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="section-title">My Portfolio</h2>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="youtube">YouTube</button>
+          <button class="filter-btn" data-filter="tiktok">TikTok</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid" aria-live="polite">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+          <div class="service-card" data-tilt>
+            <div class="service-icon"><i class="fas fa-cut"></i></div>
+            <h3>Video Editing</h3>
+            <p>Commercials, social, documentary and corporate edits.</p>
+          </div>
+          <div class="service-card" data-tilt>
+            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Color Grading</h3>
+            <p>Professional color correction and stylized grading.</p>
+          </div>
+          <div class="service-card" data-tilt>
+            <div class="service-icon"><i class="fas fa-film"></i></div>
+            <h3>Motion Graphics</h3>
+            <p>Animated titles, lower thirds, and VFX-ready compositing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card" data-tilt>
+            <div class="testimonial-text">"The editing completely transformed our raw footage into a compelling narrative."</div>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div class="author-info"><h4>Sarah Johnson</h4><p>Marketing Director, TechVision</p></div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-tilt>
+            <div class="testimonial-text">"Their attention to detail and creative input elevated our documentary."</div>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div class="author-info"><h4>Michael Chen</h4><p>Director, Horizon Films</p></div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-tilt>
+            <div class="testimonial-text">"The social videos edited for our campaign generated record engagement."</div>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div class="author-info"><h4>Jessica Williams</h4><p>Brand Manager, StyleCo</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <div class="contact-form">
+            <h3>Start a Project</h3>
+            <form id="contactForm">
+              <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+              <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
+              <div class="form-group"><textarea name="message" placeholder="Tell me about your project" required></textarea></div>
+              <button type="submit" class="btn primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="feedback">
+      <div class="container">
+        <h2 class="section-title">Feedback & Suggestions</h2>
+        <div class="feedback-container">
+          <div class="feedback-form">
+            <form id="feedbackForm">
+              <div class="form-group"><input type="text" name="name" placeholder="Your Name (Optional)"></div>
+              <div class="form-group"><input type="email" name="email" placeholder="Your Email (Optional)"></div>
+              <div class="form-group"><textarea name="message" placeholder="Your feedback or suggestions" required></textarea></div>
+              <button type="submit" class="btn primary">Send Feedback</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2 class="section-title">Stay Updated</h2>
+        <p>Subscribe for editing tips, industry insights, and special offers.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-contact">
+        <h3>Contact Me</h3>
+        <ul class="contact-details">
+          <li><i class="fas fa-envelope"></i> real1editor@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +251947758994</li>
+          <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</li>
+        </ul>
+        <a href="https://t.me/Real1editorBot" class="btn telegram-btn" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Message on Telegram</a>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="#" title="Upwork" target="_blank" rel="noopener"><i class="fab fa-upwork"></i></a>
+          <a href="#" title="Behance" target="_blank" rel="noopener"><i class="fab fa-behance"></i></a>
+          <a href="#" title="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+          <a href="#" title="Linktree" target="_blank" rel="noopener"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright"><p>&copy; 2025 Real1Editor. All rights reserved.</p></div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
